@@ -1,0 +1,231 @@
+$primary: #262626;
+$accent: #FFCB67;
+$accentLight: rgb(205, 205, 206);
+$accent: rgb(178, 188, 197);
+$accent: rgb(219, 255, 235);
+$secondary: #26D07C;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background: $accentLight;
+    
+    #bg{
+    clip-path: polygon(0 0, 97% 0, 34% 100%, 0% 100%);
+    background: $secondary;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    opacity: 1;
+    }
+
+    .phone{
+        height: 750px;
+        width: 390px;
+        border: 15px solid $primary;
+        border-radius: 50px;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        box-shadow: 70px 80px 100px 20px rgba(56, 56, 56, 0.5);
+        .interface{
+            position:relative;
+            .Button{
+                position:absolute;
+                width:6px;
+                background:$primary;
+                border-radius: 5px;
+            }
+            
+            .toggleButton{
+                height:50px;
+                top:80px;
+                left:-21px;
+            }
+            
+            .volumeButtonUp{
+                height:80px;
+                top:160px;
+                left:-21px;
+            }
+            
+            .volumeButtonDown{
+                height:80px;
+                top: 260px;
+                left:-21px;
+            }
+            
+            .powerButton{
+                right:-21px;
+                top:100px;
+                height:80px;
+            }
+        }
+        .innerPhone{
+            background: rgb(216, 216, 216);
+            height: 720px;
+            overflow: hidden;
+            border-radius: 35px;
+            position: relative;
+
+            .camera__area{
+                margin: 0 auto;
+                background: $primary;
+                height: 50px;
+                width: 200px;
+                border-radius: 40px;
+                position: absolute;
+                top: -20px;
+                right: 22%;
+                .camera{
+                    height: 15px;
+                    width: 15px;
+                    border: 1px solid rgb(12, 12, 43);
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 23px;
+                    left: 21%;
+                    background: black;
+                    display: flex;
+                    justify-content: center;
+                    z-index: 2;
+                    box-shadow: 0px 0px 4px 2px rgba($color: #000000, $alpha: 0.5);
+                    .camera__inner{
+                        height: 7px;
+                        width: 7px;
+                        border-radius: 50%;
+                        align-self: center;
+                        background-color:#050505;
+                        box-shadow:inset 0px 0px 4px 2px rgb(13, 53, 105);
+                    }
+                }
+                .speakers{
+                    height: 5px;
+                    width: 65px;
+                    border-radius: 5px;
+                    background: linear-gradient(to top, rgb(2, 2, 2), rgba(56, 56, 56, 0.5));
+                    position: absolute;
+                    top: 26px;
+                    left: 39%;
+                }
+            }
+            .home__button{
+                height: 7px;
+                width: 220px;
+                border-radius: 15px;
+                background: $primary;
+                position: absolute;
+                bottom: 14px;
+                right: 20%;
+                box-shadow: 0px 0px 2px 0.5px $primary;
+            }
+            .display{
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+                width: 100%;
+                .upper__corner{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    position: relative;
+                    .upper--block__left{
+                        margin: 9px 12px 0 12px;
+                        font-weight: bolder;
+                        font-size: 13px;
+                        display: flex;
+
+
+                    }
+                    .upper--block__right{
+                        margin: 9px 12px 0 12px;
+                        font-weight: bolder;
+                        font-size: 14px;
+                        display: flex;
+                        .percentage{
+                            font-size: 11px;
+                            padding: 0 3px;
+                        }
+                    }
+                }
+                .calculator{
+                    position: absolute;
+                    top: 19%;
+                    left: 14%;
+            
+                    #screen{
+                        width: 100%;
+                        background: linear-gradient(to left, $accent, $primary);
+                        background: $primary;
+                        height: 100px;
+                        border-radius: 10px;
+                        margin-bottom: 19px;
+                        box-shadow: 0px 5px 10px $primary;
+                        display: flex;
+                        text-align: right;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 15px;
+                        font-size: 30px;
+                        color: $accentLight;
+                        font-weight: bold;
+                        #history{
+                            height: 30%;
+                            font-size: 22px;
+                            color: $accentLight;
+                        }
+                    }
+                    .keyboard{
+                        .keyboard__wrap{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                            grid-gap: 10px;
+                            button{
+                                height: 60px;
+                                width: 60px;
+                                border-radius: 50%;
+                                outline: none;
+                                cursor: pointer;
+                                border: none;
+                                font-size: 22px;
+                                background: $primary;
+                                color: $accent;
+                                box-shadow: 0px 5px 10px $primary;
+                                font-family: 'Montserrat', sans-serif;
+                                :hover{
+                                    background: $accent;
+                                    color: $primary;
+                                    transform: scale(1.1);
+                                    transition: 0.5s ease all;
+                                }
+                            }
+                            .oper{
+                                background: $accent;
+                                color: $primary;
+                                :hover{
+                                    background: $primary;
+                                    color: $accent;
+                                    transform: scale(1.1);
+                                    transition: 0.5s ease all;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
